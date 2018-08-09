@@ -1,0 +1,22 @@
+%nav.navbar.navbar-expand-lg.navbar-dark
+  %p.navParagraph.ml-5
+    Haz tu pedido al +56 9 51064707 | contacto@disfracesfiesta.com
+    %br
+    = link_to "Disfraces Fiestas", root_path, class: "navbar-brand"
+  %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarNav.collapse.navbar-collapse
+    %ul.navbar-nav
+      %li.nav-item
+        = link_to "Productos", root_path, class: "custom-nav-link"
+      %li.nav-item
+        = link_to "Categorías", root_path, class: "custom-nav-link"
+      %li.nav-item
+        = link_to "Nuevos disfraces", root_path, class: "custom-nav-link"
+      %li.nav-item
+        = link_to "Comentarios de clientes", root_path, class: "custom-nav-link"
+      %li.nav-item
+        = link_to "¡Registrate!", root_path, class: "custom-nav-link"
+      %li.nav-item
+        = link_to "!Accede a tu cuenta¡", root_path, class: "custom-nav-link"
+%br
