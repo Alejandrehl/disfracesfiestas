@@ -35,10 +35,12 @@
             %li.nav-item
               = link_to "!Accede a tu cuenta¡", new_user_session_path, class: "custom-nav-link"
     %br
-    %p.notice
-      = notice
-    %p.alert
-      = alert
+    - if notice
+      %p.notice.alert.alert-success.col-md-4.offset-md-4
+        = notice
+    - if alert
+      %p.alert.alert-warning.col-md-4.offset-md-4
+        = alert
     .container
       = yield
 
