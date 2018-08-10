@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
+  resources :authentications, only: [:destroy]
 
   authenticated :user do
     root 'home#index', as: 'authenticated_root'
