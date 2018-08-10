@@ -25,10 +25,15 @@
             = link_to "Nuevos disfraces", root_path, class: "custom-nav-link"
           %li.nav-item
             = link_to "Comentarios de clientes", root_path, class: "custom-nav-link"
-          %li.nav-item
-            = link_to "¡Registrate!", new_user_registration_path, class: "custom-nav-link"
-          %li.nav-item
-            = link_to "!Accede a tu cuenta¡", root_path, class: "custom-nav-link"
+          - if user_signed_in?
+            %li.nav-item
+              = link_to current_user.email, root_path, class: "custom-nav-link"
+              = link_to "Salir", destroy_user_session_path, method: :delete, class: "custom-nav-link"
+          - else
+            %li.nav-item
+              = link_to "¡Registrate!", new_user_registration_path, class: "custom-nav-link"
+            %li.nav-item
+              = link_to "!Accede a tu cuenta¡", new_user_session_path, class: "custom-nav-link"
     %br
     %p.notice
       = notice
