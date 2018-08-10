@@ -9,31 +9,6 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
 
-    #fb-root
-    :javascript
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.1&appId=225151691532701&autoLogAppEvents=1';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-
-
-    :javascript
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '225151691532701',
-          cookie     : true,
-          xfbml      : true,
-          version    : 'v3.1'
-        });
-        FB.AppEvents.logPageView();
-        FB.getLoginStatus(function(response) {
-            statusChangeCallback(response);
-        });
-      };
-
     %nav.navbar.navbar-expand-lg.navbar-dark
       %p.navParagraph.ml-5
         Haz tu pedido al +56 9 51064707 | contacto@disfracesfiesta.com
