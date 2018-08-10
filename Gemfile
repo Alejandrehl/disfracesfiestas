@@ -7,6 +7,10 @@ gem 'jquery-rails'
 gem "haml-rails", "~> 1.0"
 gem "font-awesome-rails"
 gem 'devise'
+# User Authentication with Facebook
+gem 'omniauth-facebook'
+# Development ENV Variables
+gem 'figaro'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
